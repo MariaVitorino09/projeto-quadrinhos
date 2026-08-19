@@ -42,10 +42,10 @@ Sistema web completo para cadastro e gerenciamento de personagens de quadrinhos,
 ### 2. Rodando o Back-end (Spring Boot)
 ```bash
 # Clone o repositório
-git clone [https://github.com/SeuUsuario/seu-repositorio.git](https://github.com/SeuUsuario/seu-repositorio.git)
+git clone [https://github.com/MariaVitorino09/projeto-quadrinhos.git](https://github.com/MariaVitorino09/projeto-quadrinhos.git)
 
 # Acesse a pasta do projeto
-cd seu-repositorio
+cd projeto-quadrinhos
 
 # Execute a aplicação
 ./mvnw spring-boot:run
