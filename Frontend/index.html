@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METAHUMAN ARCHIVE // SPLIT VIEW</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        
+        <header class="app-header">
+            <div class="header-top-bar">
+                <span class="tag-red">SISTEMA DE CLASSIFICAÇÃO</span>
+                <span class="tag-dots">● ● ●</span>
+            </div>
+            <h1>CLASSIFICANDO META HUMANOS</h1>
+            <p class="subtitle">SISTEMA DE MONITORAMENTO E CADASTRO </p>
+        </header>
+
+        <div id="mensagem" class="mensagem hidden"></div>
+
+        <main class="content-grid">
+            
+            <section class="panel form-panel">
+                <div class="panel-header">
+                    <h2>[ CADASTRO ]</h2>
+                    <span class="panel-badge"></span>
+                </div>
+
+                <form id="personagemForm">
+                    <input type="hidden" id="personagemId">
+
+                    <div class="form-group">
+                        <label for="nome">CODINOME DO PERSONAGEM</label>
+                        <input type="text" id="nome" required placeholder="Ex: Peter Parker, Miles...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nivelPoder">NÍVEL DE AMEAÇA (1 A 100)</label>
+                        <input type="number" id="nivelPoder" min="1" max="100" required placeholder="Ex: 85">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="editora">EDITORA</label>
+                        <select id="editora" required>
+                            <option value="MARVEL">MARVEL COMICS</option>
+                            <option value="DC">DC COMICS</option>
+                            <option value="IMAGE">IMAGE COMICS</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alinhamento">ALINHAMENTO</label>
+                        <select id="alinhamento" required>
+                            <option value="HEROI">HERÓI</option>
+                            <option value="VILAO">VILÃO</option>
+                            <option value="ANTIHEROI">ANTI-HERÓI</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="btnSalvar" class="btn-primary">CONFIRMAR</button>
+                        <button type="button" id="btnCancelar" class="btn-cancel hidden" onclick="limparFormulario()">CANCELAR</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="panel table-panel">
+                <div class="panel-header">
+                    <h2>[ REGISTROS ATIVOS ]</h2>
+                    <span class="panel-badge"></span>
+                </div>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>CODINOME</th>
+                                <th>PODER</th>
+                                <th>EDITORA</th>
+                                <th>ALINHAMENTO</th>
+                                <th>AÇÕES</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelaPersonagens">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
